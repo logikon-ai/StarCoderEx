@@ -3,20 +3,21 @@ import * as vscode from "vscode";
 import updatetoken from "./updatetoken";
 
 export default async (input: string): Promise<string | null> =>{
-	//console.log(`Input: ${input}`);
+	console.log(`Input: ${input}`);
 	let promise: Promise<Response>;
 	try{
-	promise = fetch("https://api-inference.huggingface.co/models/bigcode/starcoder",
+	promise = fetch(`${vscode.workspace.getConfiguration("starcoderex").get("apiurl")}`,
 		{
 			// eslint-disable-next-line @typescript-eslint/naming-convention
 			headers: { authorization: `Bearer ${vscode.workspace.getConfiguration("starcoderex").get("bearertoken")}`, "content-type": "application/json" },
 			method: "POST",
-			body: JSON.stringify({inputs: input}),
+			body: JSON.stringify({inputs: input, parameters: {max_new_tokens: 800, num_beams: 3}}),
 		});
 	let response = await promise;
 	if(response.status !== 200){
+		console.log(`Response: ${response.statusText}`);
 		if(response.status === 400){
-		vscode.window.showErrorMessage("Bearer invalid!");
+		vscode.window.showErrorMessage(`Bearer invalid!`);
 		vscode.workspace.getConfiguration("starcoderex").update("bearertoken", "", vscode.ConfigurationTarget.Global);
 		updatetoken();
 		return null;
