@@ -28,7 +28,7 @@
         {
           "command": "starcoderex.TokenScreen",
           "group": "StarCoderEx"
-        }  
+        }
       ]
     },
     "commands": [
@@ -65,6 +65,10 @@
           "starcoderex.bearertoken": {
             "type": "string",
             "default": ""
+          },
+          "starcoderex.apiurl": {
+            "type": "string",
+            "default": "https://api-inference.huggingface.co/models/bigcode/starcoder"
           }
         }
       }
