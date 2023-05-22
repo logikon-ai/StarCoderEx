@@ -2,8 +2,11 @@
 
 StarCoderExtension for AI Code generation
 
+> [Note] This fork adapts the original extension so as to work with custom inference endpoints.
+
 
 Original AI: https://huggingface.co/bigcode/starcoder
+
 ## Features
 
 AI prompt generating code for you from cursor selection.
