@@ -1,8 +1,8 @@
 {
-  "name": "starcoderex",
-  "displayName": "StarCoderEx (AI code generator)",
+  "name": "argcoder",
+  "displayName": "ArgCoder (AI code generator)",
   "description": "Extension for using alternative GitHub Copilot (StarCoder API) in VSCode",
-  "repository": "https://github.com/Lisoveliy/starcoderex",
+  "repository": "https://github.com/Lisoveliy/argcoder",
   "icon": "logo.png",
   "version": "1.0.31",
   "publisher": "Lisoveliy",
@@ -22,51 +22,51 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "starcoderex.ScanSelPrompt",
-          "group": "StarCoderEx"
+          "command": "argcoder.ScanSelPrompt",
+          "group": "ArgCoder"
         },
         {
-          "command": "starcoderex.TokenScreen",
-          "group": "StarCoderEx"
+          "command": "argcoder.TokenScreen",
+          "group": "ArgCoder"
         }
       ]
     },
     "commands": [
       {
-        "command": "starcoderex.ScanSel",
+        "command": "argcoder.ScanSel",
         "title": "Init prompt with selected code",
-        "category": "StarCoderEx"
+        "category": "ArgCoder"
       },
       {
-        "command": "starcoderex.ScanSelPrompt",
+        "command": "argcoder.ScanSelPrompt",
         "title": "Init prompt with selected code",
-        "category": "StarCoderEx"
+        "category": "ArgCoder"
       },
       {
-        "command": "starcoderex.TokenScreen",
+        "command": "argcoder.TokenScreen",
         "title": "Enter new token",
-        "category": "StarCoderEx"
+        "category": "ArgCoder"
       }
     ],
     "keybindings": [
       {
-        "command": "starcoderex.ScanSel",
+        "command": "argcoder.ScanSel",
         "key": "ctrl+alt+p"
       }
     ],
     "configuration": [
       {
-        "title": "StarCoderEx",
+        "title": "ArgCoder",
         "properties": {
-          "starcoderex.countofrequests": {
+          "argcoder.countofrequests": {
             "type": "integer",
             "default": 4
           },
-          "starcoderex.bearertoken": {
+          "argcoder.bearertoken": {
             "type": "string",
             "default": ""
           },
-          "starcoderex.apiurl": {
+          "argcoder.apiurl": {
             "type": "string",
             "default": "https://api-inference.huggingface.co/models/bigcode/starcoder"
           }

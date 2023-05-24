@@ -12,7 +12,7 @@ export default function () {
         return;
       }
       vscode.workspace
-        .getConfiguration("starcoderex")
+        .getConfiguration("argcoder")
         .update("bearertoken", value, vscode.ConfigurationTarget.Global);
     });
 }

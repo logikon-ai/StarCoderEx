@@ -1,6 +1,6 @@
-# StarCoderEx
+# ArgCoder
 
-StarCoderExtension for AI Code generation
+ArgCodertension for AI Code generation
 
 > [Note] This fork adapts the original extension so as to work with custom inference endpoints.
 
@@ -23,7 +23,7 @@ Usage:
 
 1. Select your prompt in code using cursor selection
 
-2. Press Ctrl+Alt+P for generating prompt OR type in shell (Ctrl+Shift+P) `StarCoderEx: Init prompt with selected code`
+2. Press Ctrl+Alt+P for generating prompt OR type in shell (Ctrl+Shift+P) `ArgCoder: Init prompt with selected code`
 
 3. (If you use extension on first time) enter bearer token from https://huggingface.co/settings/tokens (page will be opened)
 
@@ -54,8 +54,8 @@ Result:
 
 This extension contributes the following settings:
 
-* `starcoderex.countofrequests`: Set requests count per command (Default: 4. Less count -> less answer, faster loading)
-* `starcoderex.bearertoken`: Set bearer token for API https://huggingface.co
+* `ArgCoder.countofrequests`: Set requests count per command (Default: 4. Less count -> less answer, faster loading)
+* `ArgCoder.bearertoken`: Set bearer token for API https://huggingface.co
 
 ## Release Notes
 

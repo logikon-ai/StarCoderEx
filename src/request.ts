@@ -6,10 +6,10 @@ export default async (input: string): Promise<string | null> =>{
 	console.log(`Input: ${input}`);
 	let promise: Promise<Response>;
 	try{
-	promise = fetch(`${vscode.workspace.getConfiguration("starcoderex").get("apiurl")}`,
+	promise = fetch(`${vscode.workspace.getConfiguration("argcoder").get("apiurl")}`,
 		{
 			// eslint-disable-next-line @typescript-eslint/naming-convention
-			headers: { authorization: `Bearer ${vscode.workspace.getConfiguration("starcoderex").get("bearertoken")}`, "content-type": "application/json" },
+			headers: { authorization: `Bearer ${vscode.workspace.getConfiguration("argcoder").get("bearertoken")}`, "content-type": "application/json" },
 			method: "POST",
 			body: JSON.stringify({inputs: input, parameters: {max_new_tokens: 800, num_beams: 3}}),
 		});
@@ -18,8 +18,8 @@ export default async (input: string): Promise<string | null> =>{
 		console.log(`Response: ${response.statusText}`);
 		if(response.status === 400){
 		vscode.window.showErrorMessage(`Bearer invalid!`);
-		vscode.workspace.getConfiguration("starcoderex").update("bearertoken", "", vscode.ConfigurationTarget.Global);
-		updatetoken();
+		// vscode.workspace.getConfiguration("argcoder").update("bearertoken", "", vscode.ConfigurationTarget.Global);
+		// updatetoken();
 		return null;
 		}else {
 			vscode.window.showWarningMessage("Service turned off right now. Try later!");

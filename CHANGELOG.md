@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "starcoderex" extension will be documented in this file.
+All notable changes to the "ArgCoder" extension will be documented in this file.
 
 ### 1.0.31
 Added error message when reference API is offline

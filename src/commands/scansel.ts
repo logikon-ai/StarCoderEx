@@ -16,7 +16,7 @@ export default async function (){
     }
     console.log("Prompt: ", text);
     let result: string | null;
-    let requests: number = vscode.workspace.getConfiguration("starcoderex").get("countofrequests")!;
+    let requests: number = vscode.workspace.getConfiguration("argcoder").get("countofrequests")!;
     vscode.window.withProgress({
         location: vscode.ProgressLocation.Notification,
         cancellable: true,
